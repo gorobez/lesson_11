@@ -1,0 +1,266 @@
+@import url('reset.css');
+@import url('fonts.css');
+
+[class*="__container"] {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+.wrapper {
+    position: relative;
+    background: url('../img/scottish\ highlands-GettyImages-187025917.webp') center / cover;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+
+.header {
+    position: fixed;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.52);
+    padding: 20px;
+    text-align: center;
+    color: rgb(40, 55, 43);
+    font-size: 0;
+}
+
+.header__logo {
+    display: inline-block;
+    position: relative;
+    top: -15px;
+    max-width: 60px;
+    max-height: 30px;
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+.header__logo img {
+    max-width: 100%;
+}
+
+.header__text {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.header__text span {
+    color: rgb(92, 92, 4);
+    text-transform: uppercase;
+}
+
+.main {
+    overflow: hidden;
+}
+
+.main__container{
+    position: relative;
+    min-height: 100vh;
+}
+
+.main__car {
+    position: absolute;
+    max-width: 450px;
+    bottom: 40px;
+    left: 10%;
+}
+
+.car__image img {
+   max-width: 100%; 
+}
+
+.car {
+    position: relative;
+}
+
+.car__logo {
+    position: absolute;
+    max-width: 45px;
+    max-height:60px;
+    top: -4px;
+    left: 170px;
+}
+
+.car__logo img {
+    max-width:100%;
+}
+
+.car__wheel {
+    position: absolute;
+    max-width: 85px;
+    height:85px;
+    bottom: 10px; 
+    
+}
+
+.car__wheel--left {
+    left: 37px;
+}
+
+.car__wheel--right {
+    right: 52px;
+}
+
+.car__wheel img {
+    max-width: 100%;
+}
+
+.main__question {
+    position: absolute;
+    bottom: 200px;
+    left: 450px;
+    background-color: rgb(137, 137, 36);
+    border-radius: 30% 70% 100% 0% / 62% 36% 64% 38%  ;
+    padding: 25px;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    opacity: 0;
+}
+
+.main__car:hover ~ .main__question {
+    opacity: 1;
+}
+
+.main__question:hover {
+    opacity: 1;
+}
+
+.question__text {
+    margin-bottom: 10px;
+}
+
+.question__link {
+    display: inline-block;
+    border: 1px solid transparent;
+    padding: 3px;
+}
+
+.question__link:hover {
+    border: 1px solid #fff;
+    border-radius: 3px;
+}
+
+.question__link:active {
+    position: relative;
+    top:3px;
+    left: 2px;
+}
+
+
+.response-positive {
+    background: rgb(117, 162, 132);
+    color: #fff;
+    max-width: 200px;
+    max-height: 100vh;
+    overflow: auto;
+    padding: 15px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.main__positive-response {
+    position: absolute;
+    left: 80%;
+}
+
+.response-positive:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.response-positive__text {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.response-positive__item {
+    margin-bottom: 15px;
+}
+
+.item {
+    padding: 10px;
+    background: rgba(52, 50, 50, 0.183);
+}
+
+.item__name {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.item__image img {
+    max-width: 100%;
+}
+
+.item__image {
+    margin-bottom: 5px;
+}
+
+
+.item__grade {
+    position: relative;
+    margin-bottom: 5px;
+    
+}
+.item__grade::after {
+    content: "";
+    position: absolute;
+    background: url("../img/icon/heart-svgrepo-com.svg") 0 0 no-repeat; 
+    width: 20px;
+    height: 15px;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.item>*:last-child {
+	margin-bottom: 0px;
+}
+
+
+.main__negative-response {
+    background: rgba(117, 162, 132, 0.806);
+    padding: 15px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 24px;
+    border-radius: 10px;
+    position: absolute;
+    top: 35%;
+    left: 50%; 
+    opacity: 0;
+}
+
+.main__negative-response span {
+    color:rgb(240, 240, 20);
+}
+
+.main__negative-response:target {
+    opacity: 1;
+}
+
+.main__wish {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 50px;
+    max-width: 400px;
+    background:  rgba(117, 162, 132, 0.536);
+    position: absolute;
+    top: 35%;
+    right: 10%; 
+    opacity: 0;
+}
+
+.main__wish:target {
+    opacity: 1;
+}
